@@ -108,3 +108,14 @@ go run 1/*
 ## Aula 17
 * generics
 
+## Aula 18
+* Mostrar uma falha de importação de modulo
+
+## Aula 18-1
+* Importar modulo e usar o go.mod
+    (go mod init modulo)
+    (go mod tidy)
+
+## Aula 18-2
+* Propriedades abertas e fechdas
+    A diferença está na letra minuscula(não exporta) e maiuscula(exporta)
