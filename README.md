@@ -21,9 +21,8 @@ https://go.dev/dl/
 
 * Control+shift+p -> go: install/update tools -> selecionar todos e instalar
 
-* na pasta raiz, que mode ter varios modulos, rodar `go work init` Para criar o arquivo go.work
 
-* executar: `go 1/main.go`
+* executar: `go run main.go`
 
 ## Aula 1
 
@@ -117,5 +116,59 @@ go run 1/*
     (go mod tidy)
 
 ## Aula 18-2
-* Propriedades abertas e fechdas
+* Propriedades abertas e fechadas
     A diferença está na letra minuscula(não exporta) e maiuscula(exporta)
+
+## Aula 18-3
+* Instalar pacotes com o go
+     go get github.com/google/uuid
+     go mod tidy (para atualizar o go.mod removendo pacotes não utilizados)
+     arquivo: go.mod fica responsavel por gerenciar os pacotes
+     arquivo: go.sum garante a integridade dos pacotes
+
+## Aula 19
+* For (unico loop em go)
+
+## Aula 20
+* Condicionais
+    if, else, else if
+    switch
+    switch com variaveis
+
+## Aula 21
+* Compilador do go
+    runtime + seu código fonte = unico binário
+    comando para compilar:  go build main.go
+    comando para executar: ./main
+
+    comando para compilar para windows: GOOS=windows go build main.go
+    comando para compilar para linux: GOOS=linux go build main.go
+    comando para outras arquiteturas: GOOS=linux GOARCH=x86 go build main.go
+
+    Mostrar todas as arquiteturas: go tool dist list
+    Ver o que esta ativo:   go env GOOS GOARCH
+
+    Para compilar o módul0
+    precisa ser uma pasta com o nome do módulo e usar o comando `go mod init modulo`
+    da de mudar o nome do modulo no build com `go build -o nome_do_modulo`
+
+
+## Aula 22
+ * Lidar com arquivos
+
+## Aula 23 
+    * Chamadas http
+
+## Aula 24
+    * deffer   
+    O deffer faz atrasar o comando. Ele é executado no final da função.
+    O deffer sempre vai ser chamado por ultimo, independente de onde ele foi chamado.
+
+## Aula 25
+    * Json
+
+## Aula 26
+    * criar um sistema de busca de cep
+
+## Aula 27 
+    * Criar um servidor http
