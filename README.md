@@ -172,3 +172,41 @@ go run 1/*
 
 ## Aula 27 
     * Criar um servidor http
+
+## Aula 28
+    * Http headers
+
+## Aula 29
+    *  Http buscacep
+
+## Aula 30
+    * Http multplexador
+
+## Aula 31
+    * Http Fileserver
+
+## Aula 32
+    * Templates
+
+## Aula 33
+    * Template Must
+
+## Aula 34
+    * HTML template
+    https://pkg.go.dev/html/template
+
+## Aula 35
+    * HTML webserver
+
+## Aula 36
+    * HTML webserver, mutiplos templates
+
+## Aula 37
+    * http Client, get e post, CopyBuffer
+
+## Aula 38
+    * http Client and Request
+
+
+## Aula 39
+    * http Client Context Control
