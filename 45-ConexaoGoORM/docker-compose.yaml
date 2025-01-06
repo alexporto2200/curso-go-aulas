@@ -1,0 +1,29 @@
+services:
+  db:
+    image: mysql:8.4
+    container_name: mysql_goexpert_goorm
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: goexpert_goorm
+      MYSQL_USER: goexpert_goorm
+      MYSQL_PASSWORD: goexpert_goorm
+    ports:
+      - "3306:3306"
+    volumes:
+      - goexpert_goorm:/var/lib/mysql
+      - ./insert.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - goexpert_goorm
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+networks:
+  goexpert_goorm:
+    driver: bridge
+
+volumes:
+  goexpert_goorm:

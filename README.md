@@ -157,56 +157,101 @@ go run 1/*
  * Lidar com arquivos
 
 ## Aula 23 
-    * Chamadas http
+ * Chamadas http
 
 ## Aula 24
-    * deffer   
+ * deffer   
     O deffer faz atrasar o comando. Ele é executado no final da função.
     O deffer sempre vai ser chamado por ultimo, independente de onde ele foi chamado.
 
 ## Aula 25
-    * Json
+ * Json
 
 ## Aula 26
-    * criar um sistema de busca de cep
+ * criar um sistema de busca de cep
 
 ## Aula 27 
-    * Criar um servidor http
+ * Criar um servidor http
 
 ## Aula 28
-    * Http headers
+ * Http headers
 
 ## Aula 29
-    *  Http buscacep
+ *  Http buscacep
 
 ## Aula 30
-    * Http multplexador
+ * Http multplexador
 
 ## Aula 31
-    * Http Fileserver
+ * Http Fileserver
 
 ## Aula 32
-    * Templates
+ * Templates
 
 ## Aula 33
-    * Template Must
+ * Template Must
 
 ## Aula 34
-    * HTML template
-    https://pkg.go.dev/html/template
+ * HTML template
+  https://pkg.go.dev/html/template
 
 ## Aula 35
-    * HTML webserver
+ * HTML webserver
 
 ## Aula 36
-    * HTML webserver, mutiplos templates
+ * HTML webserver, mutiplos templates
 
 ## Aula 37
-    * http Client, get e post, CopyBuffer
+ * http Client, get e post, CopyBuffer
 
 ## Aula 38
-    * http Client and Request
-
+ * http Client and Request
 
 ## Aula 39
-    * http Client Context Control
+ * http Client Context Control
+
+## Aula 40 
+ * Utilização de contextos para controle de tempo de execução, cancelar um processo, etc.
+    Exemplo de context com timeout
+
+## Aula 41
+ * Http Server com Context, cancelando da request
+    
+## Aula 42
+ * Http Server and Client com context
+
+## Aula 43
+ * Context com valores e parametros
+
+## Aula 44
+ * Banco de dados
+    ```bash
+        # iniciar o banco de dados com o compose
+         docker compose up -d
+
+        # iniciar o modulo
+        go mod init 44-ConexaoBancoDeDados
+
+        # encontrar as dependencias 
+        go mod tidy
+    ```
+
+ *  Importar o driver do mysql
+    Por mais que o go tenha as coisas relacionadas ao sql, ele não tem os drivers
+    Para importar o driver do mysql, é necessário instalar o pacote, é necessário informar manualmente o driver
+    `_ "github.com/go-sql-driver/mysql" ` Aonde o _ serve para indicar que mesmo não fazendo o uso direto desse modulo, ele deve ser importado, porque é uma dependencia.
+    Para instalar o driver, é necessário rodar o comando `go get github.com/go-sql-driver/mysql` ou `go mod tidy`
+
+## Aula 45
+ * GoORM 
+    Banco de dados
+    ```bash
+        # iniciar o banco de dados com o compose
+         docker compose up -d
+
+        # iniciar o modulo
+        go mod init 45-ConexaoGoORM
+
+        # encontrar as dependencias 
+        go mod tidy
+    ```

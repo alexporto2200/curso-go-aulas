@@ -1,0 +1,29 @@
+services:
+  db:
+    image: mysql:8.4
+    container_name: mysql_goexpert
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: goexpert
+      MYSQL_USER: goexpert
+      MYSQL_PASSWORD: goexpert
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_goexpert:/var/lib/mysql
+      - ./insert.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - mysql_goexpert
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+networks:
+  mysql_goexpert:
+    driver: bridge
+
+volumes:
+  mysql_goexpert:
